@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardExpenseItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginVertical="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/card_white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- EMOJI / CATEGORY ICON -->
+        <TextView
+            android:id="@+id/tvExpenseCategoryIcon"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:gravity="center"
+            android:textSize="36sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <!-- CATEGORY NAME -->
+        <TextView
+            android:id="@+id/tvExpenseCategoryName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/league_spartan_"
+            android:textColor="@color/brand_mid_blue"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="Category Name"
+            app:layout_constraintStart_toEndOf="@id/tvExpenseCategoryIcon"
+            app:layout_constraintTop_toTopOf="@id/tvExpenseCategoryIcon"
+            app:layout_constraintEnd_toStartOf="@id/ivEditExpense"/>
+
+        <!-- SUBCATEGORY NAME — hidden if no subcategory -->
+        <TextView
+            android:id="@+id/tvExpenseSubCategoryName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/hint_grey"
+            android:textSize="12sp"
+            android:text="Subcategory"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@id/tvExpenseCategoryIcon"
+            app:layout_constraintTop_toBottomOf="@id/tvExpenseCategoryName"
+            app:layout_constraintEnd_toStartOf="@id/ivEditExpense"/>
+
+        <!-- EDIT ICON -->
+        <ImageView
+            android:id="@+id/ivEditExpense"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="8dp"
+            android:padding="4dp"
+            android:src="@android:drawable/ic_menu_edit"
+            app:tint="@color/brand_mid_blue"
+            app:layout_constraintEnd_toStartOf="@id/ivDeleteExpense"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <!-- DELETE ICON -->
+        <ImageView
+            android:id="@+id/ivDeleteExpense"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="4dp"
+            android:src="@android:drawable/ic_menu_delete"
+            app:tint="@color/brand_button_red"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <!-- AMOUNT -->
+        <TextView
+            android:id="@+id/tvExpenseAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/league_spartan_"
+            android:textColor="@color/brand_mid_blue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="R 0.00"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvExpenseCategoryIcon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="4dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/hint_grey"
+            android:textSize="12sp"
+            android:text="Amount:"
+            app:layout_constraintEnd_toStartOf="@id/tvExpenseAmount"
+            app:layout_constraintTop_toBottomOf="@id/tvExpenseCategoryIcon"/>
+
+        <!-- DATE -->
+        <TextView
+            android:id="@+id/tvExpenseDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/hint_grey"
+            android:textSize="12sp"
+            android:text="Date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvExpenseAmount"/>
+
+        <!-- DESCRIPTION — hidden if empty -->
+        <TextView
+            android:id="@+id/tvExpenseDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/hint_grey"
+            android:textSize="12sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="Description"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvExpenseDate"/>
+
+        <!-- PHOTO THUMBNAIL — shown when photo attached -->
+        <ImageView
+            android:id="@+id/ivExpensePhoto"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            android:contentDescription="Expense photo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvExpenseDescription"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

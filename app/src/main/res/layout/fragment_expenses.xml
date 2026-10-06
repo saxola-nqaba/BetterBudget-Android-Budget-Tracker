@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    tools:context=".ui.ExpensesFragment">
+
+    <!-- FILTER BOX -->
+    <LinearLayout
+        android:id="@+id/layoutFilters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rounded_filter_box"
+        android:padding="12dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SORT BY:"
+                android:fontFamily="@font/league_spartan_"
+                android:textColor="@color/text_white"
+                android:textSize="10sp"
+                android:textStyle="bold"/>
+
+            <RadioGroup
+                android:id="@+id/rgSortOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rbSortAZ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A-Z"
+                    android:checked="true"
+                    android:fontFamily="@font/league_spartan_"
+                    android:textColor="@color/text_white"
+                    app:buttonTint="@drawable/radio_button_tint"
+                    android:buttonTint="@drawable/radio_button_tint"
+                    android:textSize="12sp"/>
+
+                <RadioButton
+                    android:id="@+id/rbSortFirstAdded"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="First Added"
+                    android:fontFamily="@font/league_spartan_"
+                    android:textColor="@color/text_white"
+                    app:buttonTint="@drawable/radio_button_tint"
+                    android:buttonTint="@drawable/radio_button_tint"
+                    android:textSize="12sp"/>
+
+                <RadioButton
+                    android:id="@+id/rbSortLastAdded"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Last Added"
+                    android:fontFamily="@font/league_spartan_"
+                    android:textColor="@color/text_white"
+                    android:buttonTint="@drawable/radio_button_tint"
+                    app:buttonTint="@drawable/radio_button_tint"
+                    android:textSize="12sp"/>
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FROM:"
+                android:fontFamily="@font/league_spartan_"
+                android:textColor="@color/text_white"
+                android:textSize="10sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvDateFrom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select ⌵"
+                android:fontFamily="@font/league_spartan_"
+                android:textColor="@color/text_white"
+                android:textSize="12sp"
+                android:paddingVertical="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TO:"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/league_spartan_"
+                android:textColor="@color/text_white"
+                android:textSize="10sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvDateTo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select ⌵"
+                android:fontFamily="@font/league_spartan_"
+                android:textColor="@color/text_white"
+                android:textSize="12sp"
+                android:paddingVertical="4dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- EMPTY STATE -->
+    <TextView
+        android:id="@+id/tvEmptyState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No expenses yet.\nTap Add Expense below."
+        android:textAlignment="center"
+        android:gravity="center"
+        android:fontFamily="@font/league_spartan_"
+        android:textSize="15sp"
+        android:textColor="@color/text_white"
+        android:padding="40dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/layoutFilters"
+        app:layout_constraintBottom_toTopOf="@id/rvExpenses"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- EXPENSE LIST -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvExpenses"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@id/layoutFilters"
+        app:layout_constraintBottom_toTopOf="@id/btnAddExpense"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- ADD EXPENSE BUTTON -->
+    <Button
+        android:id="@+id/btnAddExpense"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="16dp"
+        android:text="ADD EXPENSE  +"
+        android:textColor="@color/text_white"
+        android:fontFamily="@font/league_spartan_"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/brand_deep_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

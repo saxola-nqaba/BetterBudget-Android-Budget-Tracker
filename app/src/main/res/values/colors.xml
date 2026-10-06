@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Code attribution-->
+    <!--This method was adapted from a Medium Article as well as in class examples-->
+    <!--Working with Resources and Themes in Android - Artem Asoyan-->
+    <!--https://artemasoyan.medium.com/working-with-resources-and-themes-in-android-8c9d1cf388e3-->
+    <!--Author: Artem Asoyan-->
+    <!--https://artemasoyan.medium.com/-->
+    <!-- Base colours -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="brand_blue">#1565C0</color>
+    <color name="accent_dark_blue">#0A2D4D</color>
+    <color name="card_white">#FFFFFF</color>
+    <color name="text_link_blue">#1B6CA8</color>
+
+    <!-- Password strength indicator colours -->
+    <color name="rule_weak">#C62828</color>
+    <color name="rule_medium">#F57F17</color>
+    <color name="rule_strong">#2E7D32</color>
+
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_mid_blue">#2196F3</color>
+    <color name="text_navy">#010164</color>
+
+
+    <!-- Brand colours — shared across all features -->
+    <color name="brand_mid_blue">#2196F3</color>
+    <color name="brand_dark_navy">#001C30</color>
+    <color name="brand_deep_blue">#176B87</color>
+    <color name="brand_button_red">#FF5252</color>
+
+    <color name="hint_grey">#9E9E9E</color>
+
+</resources>

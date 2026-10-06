@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginVertical="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/card_white"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- EMOJI ICON -->
+        <TextView
+            android:id="@+id/tvCategoryIcon"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:gravity="center"
+            android:textSize="36sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <!-- CATEGORY NAME -->
+        <TextView
+            android:id="@+id/tvCategoryName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/league_spartan_"
+            android:textColor="@color/brand_mid_blue"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tvCategoryIcon"
+            app:layout_constraintEnd_toStartOf="@+id/llCategoryActions"
+            app:layout_constraintStart_toEndOf="@id/tvCategoryIcon"
+            app:layout_constraintTop_toTopOf="@id/tvCategoryIcon"/>
+
+        <!-- EDIT / DELETE ACTIONS -->
+        <LinearLayout
+            android:id="@+id/llCategoryActions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivEditCategory"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="8dp"
+                android:padding="4dp"
+                android:src="@android:drawable/ic_menu_edit"
+                app:tint="@color/brand_mid_blue"/>
+
+            <ImageView
+                android:id="@+id/ivDeleteCategory"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:padding="4dp"
+                android:src="@android:drawable/ic_menu_delete"
+                app:tint="@color/brand_button_red"/>
+
+        </LinearLayout>
+
+        <!-- TOTAL SPENT ROW -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="6dp"
+            android:text="Total Spent:"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/hint_grey"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvCategoryTotalSpent"
+            app:layout_constraintEnd_toStartOf="@id/tvCategoryTotalSpent"
+            app:layout_constraintTop_toTopOf="@id/tvCategoryTotalSpent"/>
+
+        <TextView
+            android:id="@+id/tvCategoryTotalSpent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/league_spartan_"
+            android:textColor="@color/brand_mid_blue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llCategoryActions"/>
+
+        <!-- PROGRESS BAR -->
+        <ProgressBar
+            android:id="@+id/pbCategoryProgress"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="10dp"
+            android:progressTint="@color/brand_mid_blue"
+            android:progressBackgroundTint="#E0E0E0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCategoryTotalSpent"/>
+
+        <!-- NO PROGRESS BAR MESSAGE -->
+        <TextView
+            android:id="@+id/tvNoProgressBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Add a Max goal to see progress"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/hint_grey"
+            android:textSize="11sp"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCategoryTotalSpent"/>
+
+
+
+        <TextView
+            android:id="@+id/tvMinGoal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/league_spartan_"
+            android:textColor="@color/brand_mid_blue"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pbCategoryProgress"
+            app:layout_constraintBottom_toTopOf="@id/llCategoryFullExtension" />
+
+        <TextView
+            android:id="@+id/tvMaxGoal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/league_spartan_"
+            android:textColor="@color/brand_mid_blue"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pbCategoryProgress"
+            app:layout_constraintBottom_toTopOf="@id/llCategoryFullExtension" />
+
+        <!-- VIEW CATEGORY BREAKDOWN BUTTON -->
+        <TextView
+            android:id="@+id/llCategoryFullExtension"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp"
+            android:text="View Category Breakdown ›"
+            android:fontFamily="@font/league_spartan_"
+            android:textColor="@color/brand_mid_blue"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvMinGoal"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

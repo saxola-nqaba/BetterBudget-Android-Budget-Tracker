@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    circle_background.xml
+    PURPOSE: Creates a simple filled circle shape used as the
+    coloured background behind category icons on expense cards.
+    The actual colour is set programmatically in the adapter
+    using backgroundTintList — the colour here does not matter.
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <solid android:color="#1B4D99"/>
+</shape>

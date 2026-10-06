@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_registration_background"
+    tools:context=".ui.RegisterActivity">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="40dp">
+
+        <!-- LOGO -->
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/better_budget_logo"
+            android:scaleType="fitCenter"/>
+
+        <!-- HEADING -->
+        <TextView
+            android:id="@+id/tvRegistration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/league_spartan_"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:textColor="@color/brand_deep_blue"
+            android:letterSpacing="0.05"
+            android:text="REGISTRATION"/>
+
+        <!-- EMAIL -->
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="32dp"
+            android:background="@drawable/spinner_background"
+            android:hint="Email Address*"
+            android:padding="12dp"
+            android:textColorHint="@color/hint_grey"
+            android:fontFamily="sans-serif"
+            android:inputType="textEmailAddress"/>
+
+        <!-- FIRST NAME -->
+        <EditText
+            android:id="@+id/etFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginHorizontal="32dp"
+            android:background="@drawable/spinner_background"
+            android:hint="First Name"
+            android:padding="12dp"
+            android:textColorHint="@color/hint_grey"
+            android:fontFamily="sans-serif"/>
+
+        <!-- LAST NAME -->
+        <EditText
+            android:id="@+id/etLastName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginHorizontal="32dp"
+            android:background="@drawable/spinner_background"
+            android:hint="Last Name"
+            android:padding="12dp"
+            android:textColorHint="@color/hint_grey"
+            android:fontFamily="sans-serif"/>
+
+        <!-- DATE OF BIRTH LABEL -->
+        <TextView
+            android:id="@+id/tvDateOfBirth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/league_spartan_"
+            android:textColor="@color/text_white"
+            android:textSize="14sp"
+            android:text="Date of Birth"/>
+
+        <!-- DATE SPINNERS -->
+        <LinearLayout
+            android:id="@+id/datePickerLayout"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="8dp">
+
+            <Spinner
+                android:id="@+id/spDay"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:textColorHint="@color/hint_grey"
+                android:background="@drawable/spinner_background"
+                android:layout_marginEnd="8dp"/>
+
+            <Spinner
+                android:id="@+id/spMonth"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:textColorHint="@color/hint_grey"
+                android:background="@drawable/spinner_background"
+                android:layout_marginEnd="8dp"/>
+
+            <Spinner
+                android:id="@+id/spYear"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:textColorHint="@color/hint_grey"
+                android:background="@drawable/spinner_background"/>
+
+        </LinearLayout>
+
+        <!-- PASSWORD -->
+        <FrameLayout
+            android:id="@+id/passwordRequirementsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+        <EditText
+            android:id="@+id/etNewPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/spinner_background"
+            android:hint="Password*"
+            android:padding="12dp"
+            android:textColorHint="@color/hint_grey"
+            android:fontFamily="sans-serif"
+            android:inputType="textPassword"/>
+
+
+        <FrameLayout
+            android:id="@+id/passwordConfirmContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+        <!-- CONFIRM PASSWORD -->
+        <EditText
+            android:id="@+id/etConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/spinner_background"
+            android:hint="Confirm Password*"
+            android:padding="12dp"
+            android:textColorHint="@color/hint_grey"
+            android:fontFamily="sans-serif"
+            android:inputType="textPassword"/>
+
+
+
+        <!-- SIGN UP BUTTON -->
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_width="280dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center_horizontal"
+            android:text="SIGN UP"
+            android:textColor="@color/text_white"
+            android:fontFamily="@font/league_spartan_"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/brand_deep_blue"
+            android:layout_marginTop="24dp"/>
+
+        <!-- ALREADY HAVE ACCOUNT -->
+        <TextView
+            android:id="@+id/tvHaveAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/text_white"
+            android:textSize="14sp"
+            android:text="Already have an account?"/>
+
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/league_spartan_"
+            android:textStyle="bold"
+            android:textColor="@color/text_white"
+            android:textSize="14sp"
+            android:text="Login"
+            android:paddingTop="4dp"
+            android:paddingBottom="16dp"/>
+
+    </LinearLayout>
+</ScrollView>

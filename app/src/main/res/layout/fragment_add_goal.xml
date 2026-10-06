@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="40dp">
+
+        <!-- HEADING -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ADD GOAL"
+            android:fontFamily="@font/league_spartan_"
+            android:textColor="@color/text_white"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"
+            android:gravity="center"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- CATEGORY LABEL -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:text="Select Category*"
+            android:fontFamily="@font/league_spartan_"
+            android:textColor="@color/text_white"
+            android:textSize="12sp"/>
+
+        <!-- CATEGORY SPINNER -->
+        <Spinner
+            android:id="@+id/spCategorySelector"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/spinner_background"
+            android:textColor="@color/brand_dark_navy"
+            android:padding="12dp"/>
+
+        <!-- MIN GOAL -->
+        <EditText
+            android:id="@+id/etGoalMinAmount"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/spinner_background"
+            android:hint="Minimum Target"
+            android:padding="12dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/text_navy"
+            android:textColorHint="@color/hint_grey"
+            android:inputType="numberDecimal"/>
+
+        <!-- MAX GOAL -->
+        <EditText
+            android:id="@+id/etGoalMaxAmount"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/spinner_background"
+            android:hint="Maximum Limit*"
+            android:padding="12dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/text_navy"
+            android:textColorHint="@color/hint_grey"
+            android:inputType="numberDecimal"/>
+
+        <!-- BUTTONS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="40dp">
+
+            <Button
+                android:id="@+id/btnCancelGoal"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:text="CANCEL"
+                android:textColor="@color/text_white"
+                android:fontFamily="@font/league_spartan_"
+                android:textStyle="bold"
+                android:backgroundTint="@color/brand_button_red"
+                android:layout_marginEnd="16dp"/>
+
+            <Button
+                android:id="@+id/btnAddGoal"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:text="ADD"
+                android:textColor="@color/text_white"
+                android:fontFamily="@font/league_spartan_"
+                android:textStyle="bold"
+                android:backgroundTint="@color/brand_deep_blue"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

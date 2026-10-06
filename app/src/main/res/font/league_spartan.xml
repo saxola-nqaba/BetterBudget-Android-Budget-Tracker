@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Code Attribution-->
+<!--This method was taken from Developers.Android.com-->
+<!--Add a font as an XML resource-->
+<!--https://developer.android.com/develop/ui/views/text-and-emoji/fonts-in-xml-->
+
+<!--Font was downloaded from Google fonts-->
+<!--https://fonts.google.com/specimen/League+Spartan?preview.script=Latn-->
+<font-family xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <font
+        app:fontStyle="normal"
+        app:fontWeight="400"
+        app:font="@font/league_spartan_"/>
+
+    <font
+        app:fontStyle="normal"
+        app:fontWeight="700"
+        app:font="@font/league_spartan_"/>
+
+</font-family>

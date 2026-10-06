@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="40dp">
+
+        <!-- HEADING -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ADD EXPENSE"
+            android:fontFamily="@font/league_spartan_"
+            android:textColor="@color/text_white"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"
+            android:gravity="center"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- CATEGORY SPINNER -->
+        <Spinner
+            android:id="@+id/spinnerExpenseCategory"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/spinner_background"
+            android:padding="12dp"/>
+
+        <!-- SUBCATEGORY SPINNER -->
+        <Spinner
+            android:id="@+id/spinnerExpenseSubCategory"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/spinner_background"
+            android:padding="12dp"/>
+
+        <!-- DATE LABEL -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date *"
+            android:fontFamily="@font/league_spartan_"
+            android:textColor="@color/text_white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- DATE ROW -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="32dp">
+
+            <EditText
+                android:id="@+id/etExpenseDay"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/spinner_background"
+                android:hint="DD"
+                android:gravity="center"
+                android:padding="12dp"
+                android:inputType="number"
+                android:maxLength="2"
+                android:fontFamily="sans-serif"
+                android:textColorHint="@color/hint_grey"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" / "
+                android:textColor="@color/text_white"
+                android:textSize="18sp"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/etExpenseMonth"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/spinner_background"
+                android:hint="MM"
+                android:gravity="center"
+                android:padding="12dp"
+                android:inputType="number"
+                android:maxLength="2"
+                android:fontFamily="sans-serif"
+                android:textColorHint="@color/hint_grey"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" / "
+                android:textColor="@color/text_white"
+                android:textSize="18sp"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/etExpenseYear"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="2"
+                android:background="@drawable/spinner_background"
+                android:hint="YYYY"
+                android:gravity="center"
+                android:padding="12dp"
+                android:inputType="number"
+                android:maxLength="4"
+                android:fontFamily="sans-serif"
+                android:textColorHint="@color/hint_grey"/>
+
+        </LinearLayout>
+
+        <!-- DESCRIPTION -->
+        <EditText
+            android:id="@+id/etExpenseDescription"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/spinner_background"
+            android:hint="Description (optional)"
+            android:padding="12dp"
+            android:fontFamily="sans-serif"
+            android:textColorHint="@color/hint_grey"
+            android:inputType="text"/>
+
+        <!-- AMOUNT -->
+        <EditText
+            android:id="@+id/etExpenseAmount"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/spinner_background"
+            android:hint="Amount (R)*"
+            android:padding="12dp"
+            android:fontFamily="sans-serif"
+            android:textColorHint="@color/hint_grey"
+            android:inputType="numberDecimal"/>
+
+        <!-- AUTOMATE LABEL -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Automate (optional)"
+            android:fontFamily="@font/league_spartan_"
+            android:textColor="@color/text_white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="16dp"/>
+
+        <!-- AUTOMATE SECTION -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/spinner_background"
+            android:padding="12dp"
+            android:orientation="horizontal">
+
+            <!-- FREQUENCY RADIO GROUP -->
+            <RadioGroup
+                android:id="@+id/rgAutomateFrequency"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rbDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Daily"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/brand_dark_navy"
+                    android:buttonTint="@color/brand_deep_blue"
+                    android:textSize="13sp"/>
+
+                <RadioButton
+                    android:id="@+id/rbWeek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Weekly"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/brand_dark_navy"
+                    android:buttonTint="@color/brand_deep_blue"
+                    android:textSize="13sp"/>
+
+                <RadioButton
+                    android:id="@+id/rbMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Monthly"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/brand_dark_navy"
+                    android:buttonTint="@color/brand_deep_blue"
+                    android:textSize="13sp"/>
+
+                <RadioButton
+                    android:id="@+id/rbYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yearly"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/brand_dark_navy"
+                    android:buttonTint="@color/brand_deep_blue"
+                    android:textSize="13sp"/>
+
+            </RadioGroup>
+
+            <!-- MULTIPLIER -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="For:"
+                    android:fontFamily="@font/league_spartan_"
+                    android:textColor="@color/brand_dark_navy"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/etMultiplier"
+                        android:layout_width="60dp"
+                        android:layout_height="44dp"
+                        android:background="@drawable/spinner_background"
+                        android:hint="1"
+                        android:inputType="number"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:fontFamily="sans-serif"
+                        android:textColorHint="@color/hint_grey"
+                        android:layout_marginEnd="8dp"/>
+
+                    <TextView
+                        android:id="@+id/tvFrequencyUnit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="—"
+                        android:fontFamily="sans-serif"
+                        android:textColor="@color/brand_deep_blue"
+                        android:textSize="13sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- PHOTO SECTION -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- PHOTO THUMBNAIL -->
+            <FrameLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="12dp">
+
+                <View
+                    android:id="@+id/vPhotoPlaceholder"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/spinner_background"
+                    android:alpha="0.3"/>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:src="@android:drawable/ic_menu_camera"
+                    android:contentDescription="Photo placeholder"
+                    android:alpha="0.7"/>
+
+                <ImageView
+                    android:id="@+id/ivPhotoPreview"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Selected photo"
+                    android:visibility="gone"/>
+
+            </FrameLayout>
+
+            <!-- PHOTO BUTTONS -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnTakePhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:text="TAKE PHOTO"
+                    android:textColor="@color/text_white"
+                    android:fontFamily="@font/league_spartan_"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:backgroundTint="@color/brand_deep_blue"
+                    android:layout_marginBottom="8dp"/>
+
+                <Button
+                    android:id="@+id/btnAddFromGallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:text="ADD FROM GALLERY"
+                    android:textColor="@color/text_white"
+                    android:fontFamily="@font/league_spartan_"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:backgroundTint="@color/brand_deep_blue"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- BUTTONS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btnExpenseCancel"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:text="CANCEL"
+                android:textColor="@color/text_white"
+                android:fontFamily="@font/league_spartan_"
+                android:textStyle="bold"
+                android:backgroundTint="@color/brand_button_red"
+                android:layout_marginEnd="16dp"/>
+
+            <Button
+                android:id="@+id/btnExpenseAdd"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:text="ADD"
+                android:textColor="@color/text_white"
+                android:fontFamily="@font/league_spartan_"
+                android:textStyle="bold"
+                android:backgroundTint="@color/brand_deep_blue"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="40dp">
+
+        <!-- HEADING -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ADD CATEGORY"
+            android:fontFamily="@font/league_spartan_"
+            android:textColor="@color/text_white"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"
+            android:gravity="center"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- CATEGORY NAME -->
+        <EditText
+            android:id="@+id/etCategoryName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/spinner_background"
+            android:hint="Category Name*"
+            android:padding="12dp"
+            android:textColorHint="@color/hint_grey"
+            android:fontFamily="sans-serif"
+            android:inputType="text"/>
+
+        <!-- ICON -->
+        <EditText
+            android:id="@+id/etCategoryIcon"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/spinner_background"
+            android:inputType="textShortMessage"
+            android:hint="Icon (emoji)*"
+            android:padding="12dp"
+            android:textColorHint="@color/hint_grey"
+            android:fontFamily="sans-serif"/>
+
+        <!-- DESCRIPTION -->
+        <EditText
+            android:id="@+id/etCategoryDescription"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/spinner_background"
+            android:hint="Description"
+            android:padding="12dp"
+            android:textColorHint="@color/hint_grey"
+            android:fontFamily="sans-serif"
+            android:inputType="text"/>
+
+        <!-- MIN GOAL -->
+        <EditText
+            android:id="@+id/etCategoryMinGoal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/spinner_background"
+            android:hint="Min goal (optional)"
+            android:padding="12dp"
+            android:textColorHint="@color/hint_grey"
+            android:fontFamily="sans-serif"
+            android:inputType="numberDecimal"/>
+
+        <!-- MAX GOAL -->
+        <EditText
+            android:id="@+id/etCategoryMaxGoal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/spinner_background"
+            android:hint="Max goal (optional)"
+            android:padding="12dp"
+            android:textColorHint="@color/hint_grey"
+            android:fontFamily="sans-serif"
+            android:inputType="numberDecimal"/>
+
+        <!-- BUTTONS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="32dp">
+
+            <Button
+                android:id="@+id/btnCategoryCancel"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:text="CANCEL"
+                android:textColor="@color/text_white"
+                android:fontFamily="@font/league_spartan_"
+                android:textStyle="bold"
+                android:backgroundTint="@color/brand_button_red"
+                android:layout_marginEnd="16dp"/>
+
+            <Button
+                android:id="@+id/btnCategoryAdd"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:text="ADD"
+                android:textColor="@color/text_white"
+                android:fontFamily="@font/league_spartan_"
+                android:textStyle="bold"
+                android:backgroundTint="@color/brand_deep_blue"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

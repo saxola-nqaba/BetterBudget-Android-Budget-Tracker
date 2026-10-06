@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="40dp">
+
+        <!-- HEADING -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DELETE GOAL"
+            android:fontFamily="@font/league_spartan_"
+            android:textColor="@color/text_white"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"
+            android:gravity="center"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- SUMMARY CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="32dp"
+            android:background="@drawable/spinner_background"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvDeleteGoalCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/league_spartan_"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/brand_dark_navy"
+                android:text="Category Name"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:id="@+id/tvDeleteGoalMax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/league_spartan_"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/brand_mid_blue"
+                android:text="Limit: R 0.00"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvDeleteGoalMin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/brand_dark_navy"
+                android:textSize="14sp"
+                android:text="Min Target: R 0.00"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvDeleteGoalPeriod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/brand_dark_navy"
+                android:textSize="14sp"
+                android:text="Period: Month - Year"/>
+
+            <!-- WARNING — outside card -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⚠️ This action cannot be undone. This goal will be permanently removed from your budget."
+                android:fontFamily="@font/league_spartan_"
+                android:textColor="@color/brand_dark_navy"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginTop="24dp"/>
+        </LinearLayout>
+
+
+        <!-- BUTTONS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="32dp">
+
+            <Button
+                android:id="@+id/btnDeleteGoalCancel"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:text="CANCEL"
+                android:textColor="@color/text_white"
+                android:fontFamily="@font/league_spartan_"
+                android:textStyle="bold"
+                android:backgroundTint="@color/brand_deep_blue"
+                android:layout_marginEnd="16dp"/>
+
+            <Button
+                android:id="@+id/btnDeleteGoalConfirm"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:text="DELETE"
+                android:textColor="@color/text_white"
+                android:fontFamily="@font/league_spartan_"
+                android:textStyle="bold"
+                android:backgroundTint="@color/brand_button_red"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
