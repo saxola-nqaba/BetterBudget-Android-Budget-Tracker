@@ -6,7 +6,7 @@ performance over time.
 
 ---
 
-## Screenshots / Demo
+## Demo
 
 > Demonstration video available on YouTube:
 > https://www.youtube.com/@betterbudget-u9f
